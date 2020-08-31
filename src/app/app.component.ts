@@ -44,7 +44,12 @@ export class AppComponent implements OnInit {
      },
      {
       title: 'Course',
-       url: '/login',
+       url: '/course',
+       icon: 'star'
+     },
+     {
+      title: 'News',
+       url: '/news',
        icon: 'star'
      }
   ];
