@@ -10,20 +10,20 @@ import { from } from 'rxjs';
   templateUrl: './news.page.html',
   styleUrls: ['./news.page.scss'],
 })
-export class NewsPage implements OnInit,OnDestroy {
+export class NewsPage implements OnInit, OnDestroy {
   newses: News[];
   sub: Subscription;
 
-  constructor(private NewsService: NewsService) { }
+  constructor(private newsService: NewsService) { }
 
   ngOnInit() {
-    this.sub = this.NewsService.getNews().subscribe(
+    this.sub = this.newsService.getNews().subscribe(
       (newses) =>{
 
         this.newses = newses;
       }
     );
-  }
+  } 
   ngOnDestroy(){
     this.sub.unsubscribe();
   }

@@ -1,4 +1,5 @@
 export interface News{
+    
     id:string;
     status:string;
     totalResults:string;
