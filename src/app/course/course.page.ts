@@ -14,10 +14,10 @@ export class CoursePage implements OnInit,OnDestroy {
   courses: Course[];
   sub: Subscription;
 
-  constructor(private CourseService: CourseService) { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    this.sub = this.CourseService.getCourse().subscribe(
+    this.sub = this.courseService.getCourse().subscribe(
       (courses) =>{
 
         this.courses = courses;

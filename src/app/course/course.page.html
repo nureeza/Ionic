@@ -7,12 +7,16 @@
 
 <ion-content>
 <ion-list>
-  <ion-item detaill *ngFor="let c of courses"><ion-label>
+
+  <ion-item detail *ngFor="let c of courses"><ion-label>
     <ion-text color="primary">
-      <h3>{{ c.c_title }}</h3>
+      <h3>{{c.c_title }}</h3>
     </ion-text>
-    <p>{{ c.c_delail }}</p>
+    <p>{{ c.c_detail}} </p>
+    <!-- <h5>{{ c.c_title }}</h5> -->
   </ion-label>
+ 
+
 <ion-badge slot="end" color="danger">{{ c.c_view }}</ion-badge></ion-item>
 </ion-list>
 

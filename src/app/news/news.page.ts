@@ -4,6 +4,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import {Subscription} from 'rxjs';
 import { from } from 'rxjs';
+import { Article } from '../models/news';
 
 @Component({
   selector: 'app-course',
@@ -13,7 +14,8 @@ import { from } from 'rxjs';
 export class NewsPage implements OnInit, OnDestroy {
   newses: News[];
   sub: Subscription;
-
+  articles: Article[];
+  totalResults: number;
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {

@@ -7,8 +7,10 @@ import { from } from 'rxjs';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
   constructor(private navCtrl: NavController) { }
+  openSignup() {
+    this.navCtrl.navigateForward('/signup');
+    }
 
   ngOnInit() {
   }
