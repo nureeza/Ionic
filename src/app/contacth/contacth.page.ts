@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { from } from 'rxjs';
 @Component({
   selector: 'app-contacth',
@@ -9,11 +9,11 @@ import { from } from 'rxjs';
 })
 export class ContacthPage implements OnInit {
 
-  constructor(private navCtrl:NavController,private route: ActivatedRoute) { }
+  constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
-  goHome(){
+  goHome() {
     this.navCtrl.navigateRoot('/home');
   }
 }

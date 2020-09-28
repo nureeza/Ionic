@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { from } from 'rxjs';
 
 @Component({
@@ -9,17 +9,17 @@ import { from } from 'rxjs';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-  Name:string;
-  Surname:string;
+  Name: string;
+  Surname: string;
 
-  constructor(private navCtrl:NavController,private route: ActivatedRoute) { 
+  constructor(private navCtrl: NavController, private route: ActivatedRoute) {
     this.Name = this.route.snapshot.paramMap.get('Name');
     this.Surname = this.route.snapshot.paramMap.get('Surname');
   }
 
   ngOnInit() {
   }
-  goHome(){
+  goHome() {
     this.navCtrl.navigateRoot('/home');
   }
 }

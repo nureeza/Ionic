@@ -10,7 +10,18 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { from } from 'rxjs';
+
+export const config ={
+  apiKey: "AIzaSyDv8-itZqL6zHxEUjlM1Vc7lHXwjpQ1D1g",
+    authDomain: "ionicebook-6c272.firebaseapp.com",
+    databaseURL: "https://ionicebook-6c272.firebaseio.com",
+    projectId: "ionicebook-6c272",
+    storageBucket: "ionicebook-6c272.appspot.com",
+    messagingSenderId: "361900766616",
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,11 +30,13 @@ import { from } from 'rxjs';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(config),
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireDatabase,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

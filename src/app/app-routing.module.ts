@@ -70,6 +70,14 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'note',
+    loadChildren: () => import('./note/note.module').then( m => m.NotePageModule)
+  },
+  {
+    path: 'smarthome',
+    loadChildren: () => import('./smarthome/smarthome.module').then( m => m.SmarthomePageModule)
   }
 ];
 

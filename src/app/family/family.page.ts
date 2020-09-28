@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-family',
@@ -12,17 +12,17 @@ export class FamilyPage implements OnInit {
 
   ngOnInit() {
   }
-  goToContact(){
+  goToContact() {
     this.navCtrl.navigateForward(['/contact-f',
-    {
-      Family:'มีพี่น้อง 4 คน',
-    }
+      {
+        Family: 'มีพี่น้อง 4 คน',
+      }
     ]);
     // this.navCtrl.navigateForward(['/contact้้้้h',{
     // }]);
   }
 
-  goBack(){
+  goBack() {
     this.navCtrl.navigateForward('/social');
   }
 }

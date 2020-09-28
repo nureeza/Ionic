@@ -2,7 +2,7 @@ import { Course } from './../models/course';
 import { CourseService } from './../course.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import {Subscription} from 'rxjs';
+import { Subscription } from 'rxjs';
 import { from } from 'rxjs';
 
 @Component({
@@ -10,7 +10,7 @@ import { from } from 'rxjs';
   templateUrl: './course.page.html',
   styleUrls: ['./course.page.scss'],
 })
-export class CoursePage implements OnInit,OnDestroy {
+export class CoursePage implements OnInit, OnDestroy {
   courses: Course[];
   sub: Subscription;
 
@@ -18,13 +18,13 @@ export class CoursePage implements OnInit,OnDestroy {
 
   ngOnInit() {
     this.sub = this.courseService.getCourse().subscribe(
-      (courses) =>{
+      (courses) => {
 
         this.courses = courses;
       }
     );
   }
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.sub.unsubscribe();
   }
 

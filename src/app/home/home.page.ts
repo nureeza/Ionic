@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { from } from 'rxjs';
 @Component({
   selector: 'app-home',
@@ -10,17 +10,17 @@ export class HomePage implements OnInit {
   constructor(private navCtrl: NavController) { }
   openSignup() {
     this.navCtrl.navigateForward('/signup');
-    }
+  }
 
   ngOnInit() {
   }
-  goToContact(){
+  goToContact() {
     this.navCtrl.navigateForward('/contacth');
     // this.navCtrl.navigateForward(['/contact้้้้h',{
     // }]);
   }
 
-  goBack(){
+  goBack() {
     this.navCtrl.navigateForward('/about');
   }
 }

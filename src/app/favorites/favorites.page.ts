@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-favorites',
@@ -13,17 +13,17 @@ export class FavoritesPage implements OnInit {
 
   ngOnInit() {
   }
-  goToContact(){
+  goToContact() {
     this.navCtrl.navigateForward(['/contact-a',
-  {
-    Address:'148/1 ม3 ต.เขาพระ อ.รัตภูมิ จ.สงขลา 90180',
-  }
-  ]);
+      {
+        Address: '148/1 ม3 ต.เขาพระ อ.รัตภูมิ จ.สงขลา 90180',
+      }
+    ]);
     // this.navCtrl.navigateForward(['/contact้้้้h',{
     // }]);
   }
 
-  goBack(){
+  goBack() {
     this.navCtrl.navigateForward('/family');
   }
 }

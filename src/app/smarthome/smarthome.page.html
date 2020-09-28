@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> SmartHome</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="openForm()">
+        <ion-icon slot="icon-only" slot="end" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ionic-padding">
+  <form *ngIf="isToogle" novalidate #note="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">หัวข้อ</ion-label>
+        <ion-input [(ngModel)]="led1" type="text" name="topic" required></ion-input>
+      </ion-item>
+     
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!smarthome.form.valid"
+          (click)="save(smarthome.value)">
+          {{ isAdd ? 'เพิ่ม ' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+  </form>
+  
+</ion-content>

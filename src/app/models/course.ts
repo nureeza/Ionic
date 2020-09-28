@@ -1,4 +1,4 @@
-export interface Course{
+export interface Course {
     id: string;
     c_title: string;
     c_detail: string;
