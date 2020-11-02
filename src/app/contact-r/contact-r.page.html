@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-paddinng">
+  <p>
+    Name: {{Name}}<br>
+    Facebook: {{Facebook}}<br>
+    IdLine:{{Line}}
+  </p>
+
+  <ion-button color="light" expand="full" shape="round" routerLink="/register" routerDirection="back">
+    Go to Back</ion-button>
+  <ion-button color="light" expand="full" shape="round" routerLink="/home1" routerDirection="back">
+    Go to home</ion-button>
+</ion-content>

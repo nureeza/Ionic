@@ -13,6 +13,21 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
+      title: 'Home1',
+      url: '/home1',
+      icon: 'home'
+    },
+    {
+      title: 'Register',
+      url: '/register',
+      icon: 'key'
+    },
+    {
+      title: 'LED',
+      url: '/led',
+      icon: 'star'
+    },
+    {
       title: 'Home',
       url: '/home',
       icon: 'home'
@@ -61,6 +76,16 @@ export class AppComponent implements OnInit {
       title: 'Smarthome',
        url: '/smarthome',
        icon: 'pencil'
+     },
+     {
+      title: 'Camera',
+       url: '/camera',
+       icon: 'camera'
+     },
+     {
+      title: 'Barcode',
+       url: '/barcode',
+       icon: 'barcode'
      },
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

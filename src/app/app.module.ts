@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
+
+import { Camera } from '@ionic-native/camera/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { from } from 'rxjs';
 
 export const config ={
@@ -37,6 +40,8 @@ export const config ={
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
+    Camera,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

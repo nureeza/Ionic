@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ถ่ายรูป</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button expand="full" color="primary" (click)="takePicture()">ถ่ายรูป!!
+  </ion-button>
+  <ion-card *ngIf="myImg">
+    <img [src]="myImg">
+  </ion-card>
+</ion-content>

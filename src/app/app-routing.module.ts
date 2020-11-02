@@ -78,6 +78,30 @@ const routes: Routes = [
   {
     path: 'smarthome',
     loadChildren: () => import('./smarthome/smarthome.module').then( m => m.SmarthomePageModule)
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'barcode',
+    loadChildren: () => import('./barcode/barcode.module').then( m => m.BarcodePageModule)
+  },
+  {
+    path: 'home1',
+    loadChildren: () => import('./home1/home1.module').then( m => m.Home1PageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'led',
+    loadChildren: () => import('./led/led.module').then( m => m.LedPageModule)
+  },
+  {
+    path: 'contact-r',
+    loadChildren: () => import('./contact-r/contact-r.module').then( m => m.ContactRPageModule)
   }
 ];
 

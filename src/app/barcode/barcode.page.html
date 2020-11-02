@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Barcode
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button expand="full" color="primary" (click)="scan()">สแกนบาร์โค้ด
+  </ion-button>
+  <ion-card *ngIf="data"> ข้อมูลที่ได้รับคือ{{data}}
+  </ion-card>
+</ion-content>
